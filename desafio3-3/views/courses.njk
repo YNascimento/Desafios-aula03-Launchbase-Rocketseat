@@ -1,0 +1,26 @@
+{%extends "layout.njk"%}
+
+{% block head %}
+
+<title>{{course.title}}</title>
+
+{% endblock %}
+
+{% block content %}
+    <div class="conteudo-title-box">
+        <h1 class="conteudo-title">Curso {{course.title}}</h1>
+    </div>
+
+    <section class="course-box">
+            <div class="course" id="{{course.id}}">
+                <img class="card-img" src="{{course.img_url}}" alt="Imagem course {{course.id}}">
+
+                <div class="course-info"> <!--Qtd modulos e preco-->
+                    <p class="card-modulos">{{course.qtd_modules}} módulos</p>
+                    <p class="card-price">{{course.price}}</p>
+                </div>
+                <a class="course-link" href="https://rocketseat.com.br/{{course.id}}" target="_blank"> Acesse aqui</a>
+            </div>    
+        </div>
+    </section>
+{% endblock %}
